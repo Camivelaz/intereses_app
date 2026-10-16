@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mis intereses</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>Que te gusta</h1>
+
+        <form action="/enviar" method="POST">
+            <input type="text" name="nombre"
+                   placeholder="Tu nombre" required>
+
+            <select name="interes" required>
+                <option value="">Selecciona...</option>
+                <option value="Videojuegos">Videojuegos</option>
+                <option value="Musica">Musica</option>
+                <option value="Deportes">Deportes</option>
+                <option value="Series o peliculas">Series o peliculas</option>
+                <option value="Otros">Otros</option>
+            </select>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+</body>
+</html>
